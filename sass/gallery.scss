@@ -42,14 +42,17 @@ a {
     }
   }
   .controls {
-    @include control-inactive;
+
     position: absolute;
     bottom: 0;
     width: 100%;
     font-size: 2em;
     text-align: center;
 
-    a { transition: color .5s; }
+    a {
+      @include control-inactive;
+      transition: color .5s;
+    }
     a:hover {
       @include control-active;
     }
@@ -74,6 +77,7 @@ a {
   .item {animation: galleryAnimation #{$gallery-total-duration}s infinite; }
   .controls .control-item {animation: controlAnimation #{$gallery-total-duration}s infinite}
 
+  // fix the scrolling issue on clickingn a href
   .control-operator { display: none; }
 
   // Stop gallery animation when there is a selected item
@@ -84,8 +88,6 @@ a {
     @include control-inactive;
     animation: none;
   }
-
-  //
 
   @for $i from 1 through $gallery-item-count {
     // selected item

@@ -21,14 +21,14 @@ a {
     .gallery .item:first-of-type {
       opacity: 1; }
   .gallery .controls {
-    color: whitesmoke;
-    color: rgba(255, 255, 255, 0.4);
     position: absolute;
     bottom: 0;
     width: 100%;
     font-size: 2em;
     text-align: center; }
     .gallery .controls a {
+      color: whitesmoke;
+      color: rgba(255, 255, 255, 0.4);
       transition: color .5s; }
     .gallery .controls a:hover {
       color: white;
